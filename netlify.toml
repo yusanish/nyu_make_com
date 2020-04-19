@@ -1,7 +1,14 @@
 [build]
-  publish = "public"
-  command = "npm run build"
-  functions = "lambda"
+publish = "public"
+command = "npm run build"
+functions = "lambda"
+
 [build.environment]
-  YARN_VERSION = "1.9.4"
-  YARN_FLAGS = "--no-ignore-optional"
+NODE_VERSION = "12.16.1"
+NPM_VERSION = "6.13.4"
+
+[[headers]]
+for = "/static/*"
+
+[headers.values]
+Cache-Control = "public, max-age=360000"
