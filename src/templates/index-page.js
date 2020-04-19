@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import logo from '../img/logo.svg'
 
 export const IndexPageTemplate = ({
   title,
@@ -15,6 +16,7 @@ export const IndexPageTemplate = ({
       <div>
         <h1>{title}</h1>
         <h3>{subheading}</h3>
+        <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
       </div>
     </div>
     <section>
